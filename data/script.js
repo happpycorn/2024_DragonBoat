@@ -17,15 +17,16 @@ const colors = {
 } ;
 
 const tail_angles = {
-    'r' : 0,
-    'm' : 90,
-    'l' : 180
+    'r' : 1638,
+    'm' : 7373,
+    'l' : 9285
 } ;
 
 const head_angles = {
-    'r' : [0, 0],
-    'm' : [90, 90],
-    'l' : [180, 180]
+    'r' : [9285, 1638],
+    'm' : [9285, 6735],
+    'l' : [9285, 8009],
+    'n' : [1638, 6735]
 } ;
 
 function init() {
@@ -126,7 +127,7 @@ function tail(angle_arg) {
   xhttp.send() ;
 }
 
-function head(angle_arg) {
+function f_head(angle_arg) {
   var xhttp = new XMLHttpRequest() ;
   xhttp.open("GET", `/head?duty=${head_angles[angle_arg][0]},${head_angles[angle_arg][1]}`, true) ;
   xhttp.send() ;
